@@ -1,0 +1,58 @@
+.experience {
+    padding-top: 126px;
+    &__wrapper {
+        padding: 60px 10px 0 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, minmax(270px, auto));
+        gap: 13px;
+        grid-auto-rows: minmax(270px, auto);
+    }
+    &__item {
+        padding: 30px 30px 25px 30px;
+        border: 1px solid #000000;
+        &-subtitle {
+            margin-top: 20px;
+        }
+        &-text {
+            margin-top: 15px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    &__degree {
+        padding-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, minmax(70px, auto));
+        column-gap: 45px;
+        row-gap: 30px;
+        grid-auto-rows: minmax(70px, auto);
+        &-title {
+            position: relative;
+            padding-left: 13px;
+            padding-top: 8px;
+            @include before_circle;
+            &:before {
+                top: 0;
+            }
+            span {
+                position: absolute;
+                right: 0;
+                font-weight: 500;
+            }
+        }
+        &-percent {
+            margin-top: -14px;
+            height: 14px;
+            background: $main-color;
+            border-radius: 4px;
+            &-shadow {
+                margin-top: 27px;
+                height: 14px;
+                background: #E8E4DE;
+                border-radius: 4px;
+            }
+        }
+    }
+}
